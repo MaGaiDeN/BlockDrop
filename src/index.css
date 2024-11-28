@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+@keyframes flash {
+  0% { background-color: rgba(255, 255, 255, 0.1); }
+  50% { background-color: rgba(255, 255, 255, 0.8); }
+  100% { background-color: rgba(255, 255, 255, 0.1); }
+}
+
+.animate-flash {
+  animation: flash 0.2s ease-out;
+}
+
+@layer utilities {
+  .shadow-glow {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  
+  .drop-shadow-glow {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  }
+}
